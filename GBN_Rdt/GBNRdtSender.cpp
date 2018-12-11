@@ -41,6 +41,13 @@ bool GBNRdtSender::send(Message &message) {
 
 	nextseqnum = (nextseqnum + 1) % K;
 	if ((nextseqnum == (base + N) % K)) IsFull = true;//发送窗口满
+													  //滑动窗口里面的内容
+	printf("\n\n窗口内容：\n");
+	for (int i = base; i != nextseqnum; i = (i + 1) % K)
+	{
+		pUtils->printPacket(">", this->packetWaitingAck[i]);
+	}
+	printf("\n\n");
 	return true;
 }
 

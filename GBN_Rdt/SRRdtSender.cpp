@@ -39,6 +39,14 @@ bool SRRdtSender::send(Message &message) {
 
 	nextseqnum = (nextseqnum + 1) % K;
 	if ((nextseqnum == (base + N) % K)) IsFull = true;//发送窗口满
+
+	printf("\n\n窗口内容：\n");
+	for (int i = base; i != nextseqnum; i = (i + 1) % K)
+	{
+		pUtils->printPacket(">", this->packetWaitingAck[i]);
+	}
+	printf("\n\n");
+
 	return true;
 }
 
@@ -59,6 +67,13 @@ void SRRdtSender::receive(Packet &ackPkt) {
 					//base向后移动
 					base = (base + 1) % K;
 				}
+
+				printf("\n\n窗口内容：\n");
+				for (int i = base; i != nextseqnum; i = (i + 1) % K)
+				{
+					pUtils->printPacket(">", this->packetWaitingAck[i]);
+				}
+				printf("\n\n");
 			}
 			IsFull = false;
 		}

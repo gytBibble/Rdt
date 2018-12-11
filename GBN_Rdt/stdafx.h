@@ -13,8 +13,7 @@
 
 
 // TODO: 在此处引用程序需要的其他头文件
-//#pragma comment (lib,"D:\\DotNetProject\\VS2017\\Rdt\\Debug\\netsimlib.lib")
-#pragma comment (lib,"C:\\Users\\17361\\Documents\\Tencent Files\\1736103647\\FileRecv\\rdt-win-student\\lib\\netsimlib.lib")
+#pragma comment (lib,"C:\\Users\\17361\\Desktop\\networking\\lab2\\netsimlib.lib")
 
 #include <iostream>
 using namespace std;

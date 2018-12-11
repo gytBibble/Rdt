@@ -98,13 +98,13 @@
     <ClCompile Include="TCPRdtReceiver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TCP_Rdt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="SR_Rdt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="GBN_Rdt.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TCP_Rdt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

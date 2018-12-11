@@ -24,7 +24,7 @@ void SRRdtReceiver::receive(Packet &packet) {
 	int checkSum = pUtils->calculateCheckSum(packet);
 
 	//如果校验和正确，同时收到报文的序号等于接收方期待收到的报文序号一致
-	if (checkSum == packet.checksum)// && this->expectSequenceNumberRcvd == packet.seqnum) 
+	if (checkSum == packet.checksum)
 	{
 		pUtils->printPacket("接收方正确收到发送方的报文", packet);
 		if (base + N <= K && (packet.seqnum >= base && packet.seqnum < base + N) || base + N > K && (packet.seqnum >= base || packet.seqnum < (base + N) % K))

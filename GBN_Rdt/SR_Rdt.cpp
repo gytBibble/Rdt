@@ -16,12 +16,8 @@ int main(int argc, char** argv[])
 	pns->init();
 	pns->setRtdSender(ps);
 	pns->setRtdReceiver(pr);
-	//pns->setInputFile("C:\\Users\\crackryan\\Desktop\\input.txt");
-	//pns->setOutputFile("C:\\Users\\crackryan\\Desktop\\output.txt");
-	pns->setInputFile("C:\\Users\\17361\\Documents\\Tencent Files\\1736103647\\FileRecv\\rdt-win-student\\input.txt");
-	pns->setOutputFile("C:\\Users\\17361\\Documents\\Tencent Files\\1736103647\\FileRecv\\rdt-win-student\\output.txt");
-	//pns->setInputFile("input.txt"); 
-	//pns->setOutputFile("output.txt");
+	pns->setInputFile("C:\\Users\\17361\\Desktop\\networking\\lab2\\SR\\input.txt");
+	pns->setOutputFile("C:\\Users\\17361\\Desktop\\networking\\lab2\\SR\\output.txt");
 	pns->start();
 
 	delete ps;
